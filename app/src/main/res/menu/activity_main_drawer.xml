@@ -29,5 +29,10 @@
             android:icon="@android:drawable/alert_dark_frame"
             android:title="@string/menu_change"
             android:visible="true" />
+        <item
+            android:id="@+id/nav_team"
+            android:icon="@android:drawable/alert_dark_frame"
+            android:title="@string/menu_team"
+            android:visible="true" />
     </group>
 </menu>
