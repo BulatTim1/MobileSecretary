@@ -4,19 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.registration.SlideshowFragment">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_create"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/buttonCreate"
+        android:layout_width="118dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:text="готово"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTime" />
+
+    <EditText
+        android:id="@+id/comName"
+        android:layout_width="329dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="название команды"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lead"
+        android:layout_width="290dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="главный"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comName" />
+
+    <Switch
+        android:id="@+id/checkMet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Мероприятие"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lead"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/addBut"
+        android:layout_width="134dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:text="добавить участникa"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textCreate"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Работа"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/checkMet"
+        app:layout_constraintTop_toBottomOf="@+id/lead" />
+
+    <Button
+        android:id="@+id/btnTime"
+        android:layout_width="158dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="установить время"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addBut" />
+
+    <TextView
+        android:id="@+id/currentDateTime"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkMet"
+        tools:ignore="UnknownId" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="351dp"
+        android:layout_height="324dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentDateTime" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,8 @@
     <string name="menu_home">Домой</string>
     <string name="menu_login">Вход</string>
     <string name="menu_registration">Регистрация</string>
-    <string name="menu_create">Создать мероприятие или задачу</string>
-    <string name="menu_change">Изменить мероприятие или задачу</string>
+    <string name="menu_create">Создать задачу</string>
+    <string name="menu_change">Изменить задачу</string>
     <string name="menu_credits">О приложении</string>
     <string name="menu_team">Команды</string>
     <string name="text_accounts">Все аккаунты</string>

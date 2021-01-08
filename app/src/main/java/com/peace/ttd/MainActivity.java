@@ -46,21 +46,29 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        if (!sh.getString("email", "").equals("")){
+            navigationView.getMenu().findItem(R.id.nav_home).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_create).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_change).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_team).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_login).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_registration).setVisible(true);
+        } else {
+            navigationView.getMenu().findItem(R.id.nav_login).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_registration).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_home).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_create).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_change).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_team).setVisible(true);
+        }
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_login, R.id.nav_registration, R.id.nav_create, R.id.nav_change)
-                .setDrawerLayout(drawer)
-                .build();
+                    R.id.nav_home, R.id.nav_create, R.id.nav_change, R.id.nav_login, R.id.nav_registration)
+                    .setDrawerLayout(drawer)
+                    .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         SharedPreferences.Editor edt = sh.edit();
-        if (!"".equals(sh.getString("email", ""))) {
-            Log.e("123", "123");
-            View login = findViewById(R.id.nav_login);
-            View registration = findViewById(R.id.nav_registration);
-            login.setVisibility(View.INVISIBLE);
-            registration.setVisibility(View.INVISIBLE);
-        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

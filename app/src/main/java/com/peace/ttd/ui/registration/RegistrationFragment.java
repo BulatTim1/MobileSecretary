@@ -58,6 +58,13 @@ public class RegistrationFragment extends Fragment {
         registrationViewModel =
                 new ViewModelProvider(this).get(RegistrationViewModel.class);
         View root = inflater.inflate(R.layout.fragment_registration, container, false);
+//        if (!sp.getString("email", "").equals("")) {
+//            FragmentManager fm = getFragmentManager();
+//            FragmentTransaction ft = fm.beginTransaction();
+//            HomeFragment fragment = new HomeFragment();
+//            ft.replace(R.id.nav_host_fragment, fragment);
+//            ft.commit();
+//        }
         nestedScrollView = (NestedScrollView) root.findViewById(R.id.nestedScrollView);
         textInputLayoutName = (TextInputLayout) root.findViewById(R.id.textInputLayoutName);
         textInputLayoutEmail = (TextInputLayout) root.findViewById(R.id.textInputLayoutEmail);

@@ -48,6 +48,13 @@ public class LoginFragment extends Fragment {
         loginViewModel =
                 new ViewModelProvider(this).get(LoginViewModel.class);
         View root = inflater.inflate(R.layout.fragment_login, container, false);
+//        if (!sp.getString("email", "").equals("")) {
+//            FragmentManager fm = getFragmentManager();
+//            FragmentTransaction ft = fm.beginTransaction();
+//            HomeFragment fragment = new HomeFragment();
+//            ft.replace(R.id.nav_host_fragment, fragment);
+//            ft.commit();
+//        }
         nestedScrollView = (NestedScrollView) root.findViewById(R.id.nestedScrollView);
         textInputLayoutEmail = (TextInputLayout) root.findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) root.findViewById(R.id.textInputLayoutPassword);
@@ -84,12 +91,12 @@ public class LoginFragment extends Fragment {
         }
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
-            FragmentManager fm = getFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction();
-            HomeFragment fragment = new HomeFragment();
             edt.putString("email", textInputEditTextEmail.getText().toString().trim());
             edt.apply();
             emptyInputEditText();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            HomeFragment fragment = new HomeFragment();
             ft.replace(R.id.nav_host_fragment, fragment);
             ft.commit();
         }
