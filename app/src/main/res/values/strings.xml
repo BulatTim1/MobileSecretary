@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Карманный секретарь</string>
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
+    <string name="nav_header_title">Карманный секретарь</string>
+<!--    <string name="nav_header_subtitle">android.studio@android.com</string>-->
+    <string name="nav_header_desc">Меню</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_logout">Выйти из профиля</string>
+
+    <string name="menu_home">Домой</string>
+    <string name="menu_login">Вход</string>
+    <string name="menu_registration">Регистрация</string>
+    <string name="menu_create">Создать мероприятие или задачу</string>
+    <string name="menu_change">Изменить мероприятие или задачу</string>
+    <string name="menu_credits">О приложении</string>
+</resources>
